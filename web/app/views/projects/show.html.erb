@@ -1,0 +1,20 @@
+<p>
+  <stong>Name:</stong>
+  <%= @project.name %>
+</p>
+<p>
+  <stong>Url:</stong>
+  <%= @project.url %>
+</p>
+<p>
+  <stong>Path:</stong>
+  <%= @project.name %>
+</p>
+
+<h2>Users</h2>
+<%= render @project.projectusers %>
+
+<h2>Add a user:</h2>
+<%= render "projectusers/form" %>
+
+<%= link_to 'Back', projects_path %> | <%= link_to 'Edit', edit_project_path(@project) %>
