@@ -39,6 +39,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    respond_with(@project)
   end
 
   def destroy
