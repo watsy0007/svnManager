@@ -2,8 +2,11 @@ class ProjectsController < ApplicationController
 
   http_basic_authenticate_with name: "wangyan", password: "wangyan", except: [:index]
 
+  respond_to :json, :html
+
   def index
     @projects = Project.all
+    respond_with(@projects)
   end
 
   def new
